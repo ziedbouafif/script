@@ -8,6 +8,10 @@
 # auteur : Zied
 # date : 01/03/2022
 #############################################
+if [ "$1" == "--create" ];then
+
+echo "notre option est create"
+else
 
 echo "
 
@@ -17,6 +21,6 @@ Options :
 	- --infos : carateriqtiques des conteneur (ip , nom , user)
 	- --start : demarrage des conte
 	- --ansible :  deploy 
-
-
 "
+fi
+
