@@ -9,8 +9,43 @@
 # date : 01/03/2022
 #############################################
 if [ "$1" == "--create" ];then
-
+echo ""
 echo "notre option est create"
+echo ""
+
+elif [ "$1" == "--drop" ];then
+echo ""
+echo "notre option est drop"
+echo ""
+
+
+elif [ "$1" == "--start" ];then
+echo ""
+echo "notre option est start"
+echo ""
+
+
+elif [ "$1" == "--info" ];then
+echo ""
+echo "notre option est info"
+echo ""
+
+
+elif [ "$1" == "--ansible" ];then
+echo ""
+echo "notre option est ansible"
+echo ""
+
+
+
+
+
+
+
+
+
+
+
 else
 
 echo "
