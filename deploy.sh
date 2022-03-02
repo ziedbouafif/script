@@ -24,14 +24,18 @@ docker rm -f $(docker ps -a |grep alpine |awk '{print $1}')
 
 elif [ "$1" == "--start" ];then
 echo ""
-echo "notre option est start"
+docker start $(docker ps -a | grep $USER-alpine | awk '{print $1}')
 echo ""
 
 
 elif [ "$1" == "--info" ];then
-echo ""
-echo "notre option est info"
-echo ""
+
+echo "information des container"
+
+for conteneur in $(docker ps -a | grep $USER-alpine | awk '{print $1}'); do
+    docker inspect -f ' => {{.Name}} - {{.NetworkSettings.IPAddress }}' $conteneur
+done
+
 
 
 elif [ "$1" == "--ansible" ];then
